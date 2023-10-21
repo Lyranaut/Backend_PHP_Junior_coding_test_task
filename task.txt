@@ -1,31 +1,31 @@
-№1
-Условие:
-Дан текст с включенными в него тегами: 
-[tag_name description =”описание”]данные, данные,...[/tag_name]
-Пример текста:
+No. 1
+Condition:
+Given is the text with the tags included in it:
+[tag_name description =”description”]data, data,...[/tag_name]
+Example text:
 Lorem Ipsum is simply [tag1 description=”Some value”]dummy text[/tag1] of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the [tag2]1500s[/tag2], when an unknown printer took...
-Имена тегов могут быть произвольными, текст также может быть произвольным. Главное это структура тега.
-Вложенность тегов не допускается.
-Описания , т.е. самого аттрибута description=”” может и не быть.
-Обязателен закрывающий тег.
-Задача:
-На выходе нужно получить 2 массива:
-Первый массив:
-Ключ элемента массива - наименование тега
-Значение – данные, т.е. текст, который это тег оборачивает
-Для приведенного текста: [‘tag1’ => ‘dummy text’, ‘tag2’ => ‘1500s’]
-Второй массив:
-Ключ элемента массива - наименование тега
-Значение – описание тега, т.е то, что внутри аттрибута description
-Для приведенного текста: [‘tag1’ => ‘Some value’]
+Tag names can be arbitrary, text can also be arbitrary. The main thing is the tag structure.
+Nesting of tags is not allowed.
+Descriptions, i.e. the description=”” attribute itself may not exist.
+The closing tag is required.
+Task:
+At the output you need to get 2 arrays:
+First array:
+Array element key - tag name
+Value – data, i.e. the text that this tag wraps
+For the given text: ['tag1' => 'dummy text', 'tag2' => '1500s']
+Second array:
+Array element key - tag name
+Value – description of the tag, i.e. what is inside the description attribute
+For the given text: [‘tag1’ => ‘Some value’]
 
-№2
-Условие:
-Дан текст в котором включены ключи (one: | two: | three:) текст может располагаться как перед ключами так и после них.
-Пример текста:
-Lorem Ipsum is simply one: dummy text of the printing and  two: typesetting industry. Lorem Ipsum has been the industry's  one: standard dummy text ever since the three: 1500s.
-Задача:
-На выходе нужно получить массив, где ключ это one, two, three, а ДАННЫЕ - текст раcполагающийся после ключа до следующего ключа или до конца текста, если не встретился ключ.
-Очередность ключей может быть произвольная. Если в тексте ключ встречается второй раз, то в итоговом массиве значение элемента массива с этим ключем должно быть перезаписано.
-Требования:
-Так как будущему сотруднику у нас предстоить работать на бекенде с фреймворком Symfony и немного с фронтенд фреймворком Vue.js (бекенд сопровождает простенькую админку на Vue.js, поэтому Нам важно понимать Ваше знание или отсутсвие знания Vue.js), то желательно использовать для отрисовки полей ввода Vue.js (без фанатизма, все простенько), а для бекенд части – Symfony. Но для задания НЕ обязательно. 
+No. 2
+Condition:
+Given is the text that includes the keys (one: | two: | three:) the text can be located both before and after the keys.
+Example text:
+Lorem Ipsum is simply one: dummy text of the printing and two: typesetting industry. Lorem Ipsum has been the industry's one: standard dummy text ever since the three: 1500s.
+Task:
+At the output you need to get an array, where the key is one, two, three, and DATA is the text located after the key until the next key or until the end of the text if the key is not found.
+The order of the keys can be arbitrary. If a key occurs a second time in the text, then in the final array the value of the array element with this key must be overwritten.
+Requirements:
+Since our future employee will have to work on the backend with the Symfony framework and a little with the frontend framework Vue.js (the backend accompanies a simple admin panel on Vue.js, so it is important for us to understand your knowledge or lack of knowledge of Vue.js), it is advisable to use Vue.js input fields (without fanaticism, everything is simple), and for the backend part - Symfony. But it is NOT required for the assignment.
